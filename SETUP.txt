@@ -1,0 +1,20 @@
+User Stories
+
+1 BOOKING
+As a customer,
+I can see availability, book, and pay motorcycles,
+so that I can rent them for my desired amount of time.
+
+2 DASHBOARD
+As an owner,
+I can login to approve and reject booking requests,
+so that my customers get immediate feedback.
+
+3 COMMUNICATION
+As a customer,
+I can send a receive important emails,
+so that I am always up to date about what is going on.
+
+
+
+
