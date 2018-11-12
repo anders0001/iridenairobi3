@@ -3,4 +3,25 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def blog
+  	
+  end
+
+  def bike4delivery
+  	
+  end
+
+  def excursions
+  	
+  end
+
+  def faq
+  	
+  end
+
+  def contact
+  	
+  end
+
 end
