@@ -18,3 +18,7 @@ so that I am always up to date about what is going on.
 
 
 
+BOOKING STATUS
+pending
+accepted
+declined

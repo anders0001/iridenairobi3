@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="banner-content">
+    <video width="100%" src="https://res.cloudinary.com/dfh7sorai/video/upload/v1541367464/realiride/video1.mp4" type="video/mp4" autoplay loop>
+    </video>
+    <div class="overlay">
+      <div class="container">
+        <h1 class="banner-title">Welcome to iRideNairobi</h1>
+        <div class="form-wrapper" style="width: 300px;">
+          <%= simple_form_for :search, :url => motorcycles_path, method: "get" do |f| %>
+            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.button :submit, "Check available motorcycles", class: "btn-primary mx-sm-2" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

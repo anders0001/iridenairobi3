@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+.overlay {
+    position:absolute;
+    top: 70px;
+    left: 16px;
+    z-index:1;
+    text-align: justify;
+}

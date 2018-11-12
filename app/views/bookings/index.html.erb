@@ -1,0 +1,9 @@
+<h1>Dashboard</h1>
+
+<% @bookings.each do |booking| %>
+  <li><%= booking.motorcycle_id %>
+      <button class="btn-primary mx-sm-2">
+        <%= link_to "APPROVE", bookings_path(booking.id), method: :patch %>
+      </button>
+  </li>
+<% end %>

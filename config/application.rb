@@ -4,6 +4,9 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+# config.action_mailer.delivery_method = :postmark
+# config.action_mailer.postmark_settings = { :api_token => "POSTMARK_API" }
+
 Bundler.require(*Rails.groups)
 
 module MailerDemo
