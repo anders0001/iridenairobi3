@@ -23,6 +23,11 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @booking = Booking.find(params[:id])
+    @booking.status = params[:status]
+    @booking.update(params.permit)
+
+    redirect_to bookings_path
   end
 
   def show
