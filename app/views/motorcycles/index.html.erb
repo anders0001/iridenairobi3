@@ -6,16 +6,19 @@
 
       <% @motorcycles.each do |motorcycle|%>
         <div class="col-xs-12 col-sm-4">
-          <div class="card" style="background-image: linear-gradient(rgba(232, 224, 224, 0.3), rgba(196, 55, 16, 0.2)), url(<%= cl_image_path(motorcycle.picture)%>);">
+
+            <img width="80%", height="200px", src=<%= cl_image_path(motorcycle.picture) %> >
+
             <div class="card-category"><h4><%= link_to motorcycle.name, motorcycle_path(motorcycle, search: {starts_at: params["search"]["starts_at"], ends_at: params["search"]["ends_at"]} ) %></h4>
             </div>
             <div class="card-description">
               <p><%= motorcycle.motorcycle_type  %></p>
               <p><%= motorcycle.price.to_s + "USD per day" %></p>
             </div>
-          </div>
           <button class="btn-primary mx-sm-2" style="color: white"><%= link_to "BOOK NOW", new_motorcycle_booking_path(motorcycle) %></button>
         </div>
       <% end %>
     </div>
 </div>
+
+
