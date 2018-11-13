@@ -2,6 +2,29 @@
   background-color: #CFA775;
   border-color:  #CFA775;
   font: Helvetica;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-primary-availability {
+  background-color: #CFA775;
+  border-color:  #CFA775;
+  font: Helvetica;
+  position: absolute;
+  bottom: 5px;
+  right: 68px;
+  color: #CFA775;
+}
+
+.btn-primary-booking {
+  background-color: #CFA775;
+  border-color:  #CFA775;
+  font: Helvetica;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 95px;
+  left: 130px;
 }
 
 .btn-primary:hover {
@@ -15,3 +38,4 @@
   border-color:  #a87f4d;
   font: bold Helvetica;
 }
+

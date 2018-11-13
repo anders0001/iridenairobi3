@@ -22,3 +22,10 @@ BOOKING STATUS
 pending
 accepted
 declined
+
+
+COLOR SCHEME
+
+#303030 (stout black)
+#EDEDE6 (foam beige)
+#CFA775 (golden ale)

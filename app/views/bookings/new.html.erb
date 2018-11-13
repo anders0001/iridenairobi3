@@ -1,6 +1,8 @@
-<h1>Book this bad motherfucker now</h1>
+<div class="container" style="padding-top: 20px">
+	<h1>Book this bad motherfucker now</h1>
 
-<%= cl_image_tag(@motorcycle.picture) %>
-<%= simple_form_for @booking, :url => motorcycle_bookings_path, method: "post" do |f| %>
-      <%= f.button :submit, "Book the motherfucker", class: "btn-primary mx-sm-2" %>
-<% end %>
+	<img width="50%", height="400px", src=<%= cl_image_path(@motorcycle.picture) %> >
+	<%= simple_form_for @booking, :url => motorcycle_bookings_path, method: "post" do |f| %>
+	      <%= f.button :submit, "Book the motherfucker", color: "white", class: "btn-primary-booking mx-sm-2" %>
+	<% end %>
+</div>

@@ -1,15 +1,17 @@
-<h1>Dashboard</h1>
+<div class="container" style="padding-top: 20px">
+  <h1>Dashboard</h1>
 
-<% @bookings.each do |booking| %>
-  <li><%= booking.motorcycle_id %>
-      <%= booking.status %>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-      <button class="btn-primary mx-sm-2">
-        <%= link_to "ACCEPT", update_booking_path(id: booking, status: "accepted"), method: "patch" %>
-      </button>
-      <button class="btn-primary mx-sm-2">
-        <%= link_to "DECLINE", update_booking_path(id: booking, status: "declined"), method: "patch" %>
-      </button>
-  </li>
-<% end %>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.motorcycle_id %>
+        <%= booking.status %>
+        <%= booking.start_date %>
+        <%= booking.end_date %>
+        <button class="btn-primary mx-sm-2">
+          <%= link_to "ACCEPT", update_booking_path(id: booking, status: "accepted"), method: "patch" %>
+        </button>
+        <button class="btn-primary mx-sm-2">
+          <%= link_to "DECLINE", update_booking_path(id: booking, status: "declined"), method: "patch" %>
+        </button>
+    </li>
+  <% end %>
+</div>
