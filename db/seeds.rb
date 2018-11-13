@@ -57,33 +57,37 @@ puts "Motorcycles successfully created!"
 
 puts "Creating Bookings..."
 
+#TO BE VERIFIED
+offset = rand(Motorcycle.count)
+
 bookings_attributes = [
   {
-    motorcycle_id: "06",
+
+    motorcycle_id: Motorcycle.offset(offset).first.id,
     start_date: "Sat, 10 Nov 2018",
     end_date: "Sun, 11 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "07",
+    motorcycle_id: Motorcycle.offset(offset).first.id,
     start_date: "Fri, 09 Nov 2018",
     end_date: "Tue, 13 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "08",
+    motorcycle_id: Motorcycle.offset(offset).first.id,
     start_date: "Fri, 09 Nov 2018",
     end_date: "Tue, 13 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "09",
+    motorcycle_id: Motorcycle.offset(offset).first.id,
     start_date: "Sat, 17 Nov 2018",
     end_date: "Sat, 24 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "10",
+    motorcycle_id: Motorcycle.offset(offset).first.id,
     start_date: "Sat, 10 Nov 2018",
     end_date: "Fri, 16 Nov 2018",
     status: "tbd",
