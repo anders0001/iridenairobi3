@@ -59,31 +59,31 @@ puts "Creating Bookings..."
 
 bookings_attributes = [
   {
-    motorcycle_id: "21",
+    motorcycle_id: "06",
     start_date: "Sat, 10 Nov 2018",
     end_date: "Sun, 11 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "22",
+    motorcycle_id: "07",
     start_date: "Fri, 09 Nov 2018",
     end_date: "Tue, 13 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "23",
+    motorcycle_id: "08",
     start_date: "Fri, 09 Nov 2018",
     end_date: "Tue, 13 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "24",
+    motorcycle_id: "09",
     start_date: "Sat, 17 Nov 2018",
     end_date: "Sat, 24 Nov 2018",
     status: "tbd",
   },
   {
-    motorcycle_id: "25",
+    motorcycle_id: "10",
     start_date: "Sat, 10 Nov 2018",
     end_date: "Fri, 16 Nov 2018",
     status: "tbd",
