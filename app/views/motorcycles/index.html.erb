@@ -6,7 +6,7 @@
     <% @motorcycles.each do |motorcycle|%>
       <div class="col-xs-12 col-sm-4" style="margin-bottom: 30px">
 
-        <img width="80%", height="200px", src=<%= cl_image_path(motorcycle.picture) %> >
+        <img width="80%", height="200px", src=<%= cl_image_tag(motorcycle.picture) %> >
 
         <div class="card-category"><h4><%= link_to motorcycle.name, motorcycle_path(motorcycle, search: {starts_at: params["search"]["starts_at"], ends_at: params["search"]["ends_at"]} ) %></h4>
         </div>
