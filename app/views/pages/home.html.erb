@@ -5,7 +5,7 @@
     <div class="overlay">
       <div class="container">
         <h1 class="banner-title">Motorcycle Rental</h1>
-        <p class="banner-title">Rent and drive your own boda boda with iRideNairobi</p>
+        <p class="banner-title" style="font-size: 16px;">Rent and drive your own boda boda with iRideNairobi</p>
         <div class="form-wrapper" style="width: 300px;">
           <%= simple_form_for :search, :url => motorcycles_path, method: "get" do |f| %>
             <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
