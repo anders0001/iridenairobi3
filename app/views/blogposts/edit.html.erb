@@ -1,2 +1,15 @@
-<h1>Blogposts#edit</h1>
-<p>Find me in app/views/blogposts/edit.html.erb</p>
+<div class="container" style="padding-top: 20px">
+	<h1>EDIT THIS WEIRD BLOG ENTRY</h1>
+
+	<%= simple_form_for @blogpost do |f|%>
+	  <h4 class="form-label">Title</h4>
+	  <div class="row">
+	    <%= f.input :name, label: false,placeholder: "Write your title here" %>
+	  </div>
+	  <h4 class="form-label">Blogpost</h4>
+		<div class="row">
+	   	<%= f.input :description, label: false, placeholder: "Write your amazing new blog post here" %>
+	  </div>
+    <%= f.submit "Post new blog post", class: "btn-primary mx-sm-2<" %>
+	<% end %>
+</div>
