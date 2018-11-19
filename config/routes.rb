@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'home', to: 'pages#home'
-  get 'blog', to: 'pages#blog'
   get 'excursions', to: 'pages#excursions'
   get 'bike4delivery', to: 'pages#bike4delivery'
   get 'faq', to: 'pages#faq'
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :show, :edit, :update]
   resources :motorcycles, only: [:index, :show] do
     resources :bookings, only: [:new, :create]
-
   end
+  resources :blogposts
 end

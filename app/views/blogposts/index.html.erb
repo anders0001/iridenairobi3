@@ -1,0 +1,28 @@
+<div class="container" style="padding-top: 20px">
+<h1>Our larger than MX GP Blog</h1>
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Write new blogpost", new_blogpost_path %>
+  </button>	
+  <br>
+  <br>
+  <div class="row">
+    <% @blogposts.each do |blogpost| %>
+      <div class="message">
+        <div class="message-name">
+          <%= blogpost.date %>
+        </div>
+        <div class="message-name">
+          <%= blogpost.name %>
+        </div>
+        <div class="message-name">
+          <%= blogpost.description %>
+        </div>
+        <div class="message-name">
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "delete", blogposts_path %>
+          </button> 
+        </div>
+      </div>
+		<% end %>
+	</div>
+</div>
