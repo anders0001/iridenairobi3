@@ -57,36 +57,36 @@ puts "Motorcycles successfully created!"
 
 puts "Creating Bookings..."
 
+
 bookings_attributes = [
   {
-
     motorcycle_id: Motorcycle.first.id,
-    start_date: "Sat, 10 Nov 2018",
-    end_date: "Sun, 11 Nov 2018",
+    start_date: Date.today+3,
+    end_date: Date.today+7,
     status: "pending",
   },
   {
     motorcycle_id: Motorcycle.second.id,
-    start_date: "Fri, 09 Nov 2018",
-    end_date: "Tue, 13 Nov 2018",
+    start_date: Date.today+6,
+    end_date: Date.today+8,
     status: "pending",
   },
   {
     motorcycle_id: Motorcycle.third.id,
-    start_date: "Fri, 09 Nov 2018",
-    end_date: "Tue, 13 Nov 2018",
+    start_date: Date.today+5,
+    end_date: Date.today+9,
     status: "pending",
   },
   {
     motorcycle_id: Motorcycle.fourth.id,
-    start_date: "Sat, 17 Nov 2018",
-    end_date: "Sat, 24 Nov 2018",
+    start_date: Date.today+13,
+    end_date: Date.today+17,
     status: "pending",
   },
   {
     motorcycle_id: Motorcycle.fifth.id,
-    start_date: "Sat, 10 Nov 2018",
-    end_date: "Fri, 16 Nov 2018",
+    start_date: Date.today+1,
+    end_date: Date.today+3,
     status: "pending",
   }]
 

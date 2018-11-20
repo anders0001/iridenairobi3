@@ -1,10 +1,9 @@
 class MotorcyclesController < ApplicationController
   def index
-    if params["search"]["starts_at"].present? && params["search"]["ends_at"].present?
+    if params["search"]["start_date"].present? && params["search"]["end_date"].present?
       @motorcycles = []
-      a = Date.parse(params["search"]["starts_at"])
-      b = Date.parse(params["search"]["ends_at"])
-raise
+      a = Date.parse(params["search"]["start_date"])
+      b = Date.parse(params["search"]["end_date"])
       Motorcycle.all.each do |motorcycle|
         motorcycle.bookings.each do |booking|
           c = booking.start_date
