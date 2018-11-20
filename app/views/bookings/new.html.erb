@@ -1,8 +1,14 @@
 <div class="container" style="padding-top: 20px">
 	<h1>Book this bad motherfucker now</h1>
-
-	<img width="50%", height="400px", src=<%= cl_image_path(@motorcycle.picture) %> >
-	<%= simple_form_for @booking, :url => motorcycle_bookings_path(start_date: params["start_date"], end_date: params["end_date"]), method: "post" do |f| %>
-	      <%= f.button :submit, "Book the motherfucker", class: "btn-primary-booking mx-sm-2" %>
-	<% end %>
+  <div class="row">
+  	<img width="50%", height="400px", src=<%= cl_image_path(@motorcycle.picture) %> >
+    <button class="btn-primary-availability mx-sm-2">
+      <%= link_to motorcycle_bookings_path(motorcycle_id: @motorcycle.id, start_date: params["start_date"], end_date: params["end_date"]), method: :post do %>
+        <div style="color: white; font-weight: bold">Book the motherfucker</div>
+      <% end %>          
+    </button>
+  </div>
 </div>
+
+
+

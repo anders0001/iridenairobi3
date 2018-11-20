@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(motorcycle_id: params[:motorcycle_id])
+    @booking = Booking.new(booking_params)
     @booking.status = "pending"
     @booking.save
 
@@ -31,5 +31,11 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @booking = Booking.find(params[:id])
+  end
+
+  private
+  def booking_params
+    params.permit(:motorcycle_id, :start_date, :end_date)
   end
 end
