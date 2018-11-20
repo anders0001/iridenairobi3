@@ -1,12 +1,17 @@
-<div class="container" style="padding-top: 20px">
+<div class="container" style="padding-top: 20px; padding-bottom: 20px">
 	<h1>Book this bad motherfucker now</h1>
   <div class="row">
-  	<img width="50%", height="400px", src=<%= cl_image_path(@motorcycle.picture) %> >
-    <button class="btn-primary-availability mx-sm-2">
-      <%= link_to motorcycle_bookings_path(motorcycle_id: @motorcycle.id, start_date: params["start_date"], end_date: params["end_date"]), method: :post do %>
-        <div style="color: white; font-weight: bold">Book the motherfucker</div>
-      <% end %>          
-    </button>
+    <div class="col-xs-12 col-sm-6">
+      <img width="100%", height="400px", src=<%= cl_image_path(@motorcycle.picture) %> >
+    </div>
+    <div class="col-xs-12 col-sm-6" style="height: 400px">
+      <div style="height: 360px; border-style: solid; vertical-align: center; border-width: thin; border-color: black; text-align: center; width: 100%;"><br><br><br><br><br><br><br>ENTER YOUR PAYMENTS DETAILS HERE, PUNK </div>
+      <button class="btn-primary mx-sm-2" style="position: absolute; width: 100%; bottom: 0; right: 0">
+        <%= link_to motorcycle_bookings_path(motorcycle_id: @motorcycle.id, start_date: params["start_date"], end_date: params["end_date"]), method: :post do %>
+          <div style="color: white; font-weight: bold">Book and pay for the motherfucker</div>
+        <% end %>          
+      </button>
+    </div>
   </div>
 </div>
 
