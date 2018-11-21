@@ -20,6 +20,7 @@ class MotorcyclesController < ApplicationController
   end
 
   def show
+    @motorcycle = Motorcycle.find(params[:id])
   end
 
   def new

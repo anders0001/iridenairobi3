@@ -41,6 +41,9 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
+  def test
+  end
+
   private
   def booking_params
     params.permit(:motorcycle_id, :start_date, :end_date)

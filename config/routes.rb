@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get 'bike4delivery', to: 'pages#bike4delivery'
   get 'faq', to: 'pages#faq'
   get 'contact', to: 'pages#contact'
-  get 'dashboard', to: 'bookings#index'
-  get 'dashboard-moto', to: 'motorcycles#crud'
+  get 'dashboard', to: 'dashboard#index'
+  get 'test', to: 'bookings#test'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   patch 'booking/:id', to: "bookings#update", as: 'update_booking'
   

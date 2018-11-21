@@ -6,5 +6,21 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-import "../plugins/flatpickr"
+import "../plugins/flatpickr";
+import "bootstrap";
+import "jquery";
+
+
 console.log('Hello World from Webpacker')
+
+$("#tab-1").click(function () {
+  $(".container-1").first().show();
+});
+
+
+const first_tab = document.getElementById("tab-1");
+
+first_tab.addEventListener("click", (event) => {
+	console.log(event.currentTarget);
+});
+
