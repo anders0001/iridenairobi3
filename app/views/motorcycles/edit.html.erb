@@ -1,0 +1,18 @@
+<div class="container" style="padding-top: 20px">
+<h1>Edit this baby here</h1>
+	<%= simple_form_for @motorcycle do |f|%>
+	  <h4 class="form-label">Name</h4>
+	  <div class="row">
+	    <%= f.input :name, label: false, placeholder: "Edit name here" %>
+	  </div>
+ 	  <h4 class="form-label">Price</h4>
+		<div class="row">
+  	 	<%= f.input :price, label: false, placeholder: "How much do you wanna charge for this hot bitch now, son??" %>
+  	</div>
+	  <h4 class="form-label">Description</h4>
+		<div class="row">
+	   	<%= f.input :description, label: false, placeholder: "Edit the amazing description here" %>
+	  </div>
+    <%= f.submit "Edit motorcycle details", class: "btn-primary mx-sm-2" %>
+	<% end %>
+</div>

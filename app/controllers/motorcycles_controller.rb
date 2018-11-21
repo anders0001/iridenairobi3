@@ -21,4 +21,42 @@ class MotorcyclesController < ApplicationController
 
   def show
   end
+
+  def new
+    @motorcycle = Motorcycle.new    
+  end
+
+  def crud
+    @motorcycles = Motorcycle.all
+  end
+
+  def create
+    @motorcycle = Motorcycle.new(motorcycle_params)
+    @motorcycle.save
+
+    redirect_to dashboard_moto_path
+  end
+
+  def edit
+    @motorcycle = Motorcycle.find(params[:id])
+  end
+
+  def update
+    @motorcycle = Motorcycle.find(params[:id])
+    @motorcycle.update(motorcycle_params)
+
+    redirect_to dashboard_moto_path
+  end
+
+  def destroy
+    @motorcycle = Motorcycle.find(params[:id])
+    @motorcycle.destroy
+
+    redirect_to dashboard_moto_path
+  end
+
+  private
+  def motorcycle_params
+    params.require(:motorcycle).permit(:name, :description, :price)
+  end
 end
