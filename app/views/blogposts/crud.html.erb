@@ -1,0 +1,45 @@
+<div class="container" style="padding-top: 60px">
+<h1>Our larger than MX GP Blog</h1>
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Go to Bookings Dashboard", bookings_path %>
+  </button> 
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Go to Motorcycle Dashboard", dashboard_motorcycles_path %>
+  </button> 
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Write new blogpost", new_blogpost_path %>
+  </button>	
+  <br>
+  <br>
+  <div class="row">
+    <% @blogposts.each do |blogpost| %>
+      <div class="message">
+        <div class="message-name">
+          <%= blogpost.date %>
+        </div>
+        <div class="message-name">
+          <%= blogpost.name %>
+        </div>
+        <div class="message-name">
+          <%= blogpost.description %>
+        </div>
+        <div class="message-name">
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "read", 
+                  blogpost_path(blogpost) %>
+          </button> 
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "edit", 
+                  edit_blogpost_path(blogpost) %>
+          </button> 
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "delete", 
+                  blogpost_path(blogpost),
+                        method: "delete", 
+                        data: { confirm: 'Are you sure you want to delete this wonderful piece of literature?' } %>
+          </button> 
+        </div>
+      </div>
+		<% end %>
+	</div>
+</div>

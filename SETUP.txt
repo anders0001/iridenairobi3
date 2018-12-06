@@ -1,16 +1,16 @@
-User Stories
+USER STORIES___________________________________________
 
-1 BOOKING
+1 BOOKING - DONE
 As a customer,
 I can see availability, book, and pay motorcycles,
 so that I can rent them for my desired amount of time.
 
-2 DASHBOARD
+2 DASHBOARD - DONE
 As an owner,
 I can login to approve and reject booking requests,
 so that my customers get immediate feedback.
 
-3 COMMUNICATION
+3 COMMUNICATION - WAIT FOR POSTMARK LOGIN
 As a customer,
 I can send a receive important emails,
 so that I am always up to date about what is going on.
@@ -18,14 +18,13 @@ so that I am always up to date about what is going on.
 
 
 
-BOOKING STATUS
+BOOKING STATUS_________________________________________
 pending
 accepted
 declined
 
 
-COLOR SCHEME
-
+COLOR SCHEME____________________________________________
 #303030 (stout black)
 #EDEDE6 (foam beige)
 #CFA775 (golden ale)

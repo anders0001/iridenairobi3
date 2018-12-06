@@ -1,0 +1,34 @@
+<div class="container" style="padding-top: 20px">
+<h1>Users</h1>
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Go to Bookings Dashboard", bookings_path %>
+	  <%= link_to "Go to Motorcycle Dashboard", dashboard_motorcycles_path %>
+  </button> 
+  <button class="btn-primary mx-sm-2">
+    <%= link_to new_user_registration_path do %>
+      <div style="color: white; font-weight: bold">Sign up a new User HERE</div>
+    <% end %>          
+  </button>
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="message">
+        <div class="message-name">
+    			<%= user.name %>
+	    	</div>
+    	 	<div class="message-name">
+    	 	  <button class="btn-primary mx-sm-2">
+    				<%= link_to edit_motorcycle_path(motorcycle) do %>
+      				<div style="color: white; font-weight: bold">edit</div>
+					    	<% end %>          
+  				</button>
+    	 	  <button class="btn-primary mx-sm-2">
+					  <%= link_to "delete", 
+                  motorcycle_path(motorcycle),
+                        method: "delete", 
+                        data: { confirm: 'Are you sure you want to delete this wonderful piece of user admin?' } %>    
+  				</button>
+	    	</div>
+    	</div>
+    <% end %>
+  </div>
+ </div>

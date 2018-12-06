@@ -1,10 +1,16 @@
 class BlogpostsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
     @blogposts = Blogpost.all
   end
 
   def show
     @blogpost = Blogpost.find(params[:id])
+  end
+
+  def crud
+    @blogposts = Blogpost.all
   end
 
   def new

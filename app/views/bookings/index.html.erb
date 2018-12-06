@@ -1,1 +1,40 @@
-index.html.erb
+<div class="container" style="padding-top: 60px">
+<h1>Bookings</h1>
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Go to Motorcycle Dashboard", dashboard_motorcycles_path %>
+  </button> 
+  <button class="btn-primary mx-sm-2">
+    <%= link_to "Go to edit some kewl blogposts", dashboard_blogposts_path %>
+  </button> 
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="message">
+        <div class="message-name">
+          <%= booking.motorcycle_id %>
+          <%= booking.status %>
+        </div>
+        <div class="message-name">
+          <%= booking.start_date %>
+          <%= booking.end_date %>
+        </div>
+        <div class="message-name">
+        INSERT USER COMMENT HERE
+        </div>  
+        <div class="message-name">
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "accept", update_booking_path(id: booking, status: "accepted"), method: "patch" %>
+          </button>
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "decline", update_booking_path(id: booking, status: "declined"), method: "patch" %>
+          </button>
+          <button class="btn-primary mx-sm-2">
+            <%= link_to "delete", 
+                  motorcycle_booking_path(motorcycle_id: booking.motorcycle_id, id: booking),
+                        method: "delete", 
+                        data: { confirm: 'Are you sure you want to delete this wonderful piece of money-makin?' } %>    
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

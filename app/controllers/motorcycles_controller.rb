@@ -1,4 +1,6 @@
 class MotorcyclesController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def index
     if params["search"]["start_date"].present? && params["search"]["end_date"].present?
       @motorcycles = []
@@ -35,7 +37,7 @@ class MotorcyclesController < ApplicationController
     @motorcycle = Motorcycle.new(motorcycle_params)
     @motorcycle.save
 
-    redirect_to dashboard_moto_path
+    redirect_to dashboard_motorcycles_path
   end
 
   def edit
@@ -46,14 +48,14 @@ class MotorcyclesController < ApplicationController
     @motorcycle = Motorcycle.find(params[:id])
     @motorcycle.update(motorcycle_params)
 
-    redirect_to dashboard_moto_path
+    redirect_to dashboard_motorcycles_path
   end
 
   def destroy
     @motorcycle = Motorcycle.find(params[:id])
     @motorcycle.destroy
 
-    redirect_to dashboard_moto_path
+    redirect_to dashboard_motorcycles_path
   end
 
   private
