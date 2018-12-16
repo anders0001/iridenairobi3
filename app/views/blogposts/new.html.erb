@@ -1,15 +1,20 @@
-<div class="container" style="padding-top: 20px">
+<div class="container" id="container-padding">
 	<h1>WRITE NEW BLOG ENTRY</h1>
 
 	<%= simple_form_for @blogpost do |f|%>
 	  <h4 class="form-label">Title</h4>
+	  
 	  <div class="row">
 	    <%= f.input :name, label: false, placeholder: "Write your title here" %>
 	  </div>
 	  <h4 class="form-label">Blogpost</h4>
+		
 		<div class="row">
 	   	<%= f.input :description, label: false, placeholder: "Write your amazing new blog post here" %>
 	  </div>
+	  <%= f.input :photo %>
+	  <%= f.input :photo_cache, as: :hidden %>
     <%= f.submit "Post new blog post", class: "btn-primary mx-sm-2" %>
 	<% end %>
+	
 </div>

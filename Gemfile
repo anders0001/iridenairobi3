@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'cloudinary'
 gem 'postmark-rails'
+gem 'carrierwave'
 gem 'stripe'
 
 group :development do

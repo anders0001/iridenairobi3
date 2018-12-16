@@ -1,9 +1,15 @@
-<div class="container" style="padding-top: 20px">
+<div class="container" id="container-padding">
 <h1><%= @blogpost.name %></h1>
 
 <%= @blogpost.description %>
 
+
 <br>
+<%= if @blogpost.photo != nil
+			cl_image_tag @blogpost.photo, height: 300, width: 400, crop: :fill
+		else
+			nil
+		end %>
 <br>
 <br>
 <br>
